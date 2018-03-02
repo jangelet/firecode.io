@@ -1,21 +1,17 @@
-// java.util.* and java.util.streams.* have been imported for this problem.
-// You don't need any other imports.
-
 public static int[] bubbleSortArray(int[] arr){
     
-    if(arr.length < 2) return arr;
-    
     int temp = 0;
-    
-    for(int i = 0; i < arr.length - 1; i++){
-        for(int j = 0; j < arr.length - i - 1; j++){
-            if(arr[j] > arr[j+1]){
-                temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+    //iterate through array, comparing each value to the next 
+    for(int bubble = arr.length - 1; bubble >= 0; bubble--){
+        for(int i = 0; i < bubble; i++){
+            if(arr[i] > arr[i+1]){
+                temp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = temp;
             }
         }
     }
+
     
     return arr;
 }

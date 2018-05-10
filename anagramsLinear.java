@@ -1,5 +1,6 @@
 public static boolean isAnagram(String input1, String input2) {
     
+	//checks for auto false
     if(input1 == null || input2 == null || input1.length() != input2.length()) return false;
     
     int[] buffer = new int[26];

@@ -7,6 +7,7 @@ public static Boolean binarySearch(int[] arr, int n){
     int right = arr.length - 1;
     
     
+   //search	
     while(left <= right){
         int mid = (left + right)/2;
         if(arr[mid] == n){
